@@ -33,13 +33,9 @@ const FaqAnswer = styled.div`
     display: block;
     text-align: left;
 
-    max-height: 300px;
-    transition: max-height .1s cubic-bezier(.5,0,.1,1);
-
     &.closed {
         max-height: 0;
         overflow: hidden;
-        transition: max-height .25s cubic-bezier(.5,0,.1,1);
     }
 `
 
