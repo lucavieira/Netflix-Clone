@@ -8,7 +8,6 @@ const Download = styled.div`
   background: #000;
   border: 2px solid hsla(0,0%,100%,.25);
   border-radius: 0.75em;
-  bottom: 3%;
   box-shadow: 0 0 2em 0 #000;
   display: flex;
   left: 25%;
@@ -16,7 +15,7 @@ const Download = styled.div`
   min-width: 15em;
   padding: 0.25em 0.65em;
   position: absolute;
-  transform: translateX(-50%);
+  transform: translate(-52%,125%);
   width: 25%;
 `
 

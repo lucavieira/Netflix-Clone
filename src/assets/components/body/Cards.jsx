@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import ContainerCard from "../globals/ContainerCard";
+import Downloads from "./Downloads";
+
 const Card = styled.div`
   max-width: 1100px;
   display: flex;
@@ -47,23 +50,18 @@ const CardSubtitle = styled.h2`
   margin: 0.75em 0 0.25em;
 `
 
-const ContainerCard = styled.div`
-    width: 100%;
-    padding: 45px 45px;
-    border-bottom: 8px solid #222;
-`
-
-function Cards ({title, subtitle, image, row=""}) {
+function Cards ({title, subtitle, image, row, lastCard}) {
     return (
         <ContainerCard>
             <Card className={row}>
-                <CardTexts>
-                    <CardTitle>{title}</CardTitle>
-                    <CardSubtitle>{subtitle}</CardSubtitle>
-                </CardTexts>
-                <CardImage className={row}>
-                    <img src={image} alt="TV" />
-                </CardImage>
+              <CardTexts>
+                  <CardTitle>{title}</CardTitle>
+                  <CardSubtitle>{subtitle}</CardSubtitle>
+              </CardTexts>
+              <CardImage className={row}>
+                  <img src={image} alt="TV" />
+              </CardImage>
+              {lastCard === 'yes' ? <Downloads /> : <></>}
             </Card>
         </ContainerCard>
     )
